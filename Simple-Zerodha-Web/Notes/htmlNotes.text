@@ -1,0 +1,127 @@
+**HTML**
+
+1)HTML Tags
+HTML tags are basically keywords present on a web page that define how your w eb browser must format and display the content
+
+2)Type of HTML Tags
+
+a)<html>, <head> & <body> are the important high level structural tags of your code.
+Even if we don't write html tag then browser auto adds it.
+
+<html>
+   
+   <head> 
+   // Contains metadata of our code
+
+   <title> Google </title>
+
+   </head>
+
+   <body> 
+   // Contains the main code
+   </body>
+   
+</html>
+
+b)<title>
+This tag is basically used for adding the title on the web browser tab
+
+c)<div> </div>
+This tag basically takes all the space available to it horizontally
+
+Code:
+<div>
+
+  <div>
+   Hello
+  </div>
+
+  <div>
+   World
+  </div>
+
+</div>
+
+Output:
+Hello
+World
+
+
+d)<span> </span>
+This tag takes only the space which is actually required
+
+<span>
+
+  <span>
+   Hello
+  </span>
+
+  <span>
+   World
+  </span>
+
+</span>
+
+output:
+Hello World
+
+e)<h1> to <h6>
+These tags are heading tags and size decreases as we go from h1 to h6
+
+f)<p> </p>
+This tag is used when we want to add paragraph text (We can user other tags as well for paragraphs)
+
+g)<img></img>
+This tag is used for diplaying the images
+
+code:
+<img src = "photo.png"> </img>
+
+h)<center></center>
+This tag is used to center the content
+
+i)<a></a>
+We use this tag when we want to navigate user from one page to another when content is pressed
+
+code:
+
+<a href = "https://google.com >Go to google </a>
+
+*If suppose we want to open the page in a new tab then we need a add the following
+
+<a href = "https://google.com target = "_blank" >Go to google </a>
+
+j)<b></b> && <i> </i>
+<b> tag is used when we want to bold the text and <input> is used when we want to make text italic
+
+*If we want both bold and italic at same time then we can don
+
+code:
+<b>
+
+ <i>
+
+ </i>
+
+</b>
+
+k)<button> Hi there </button>
+This tag is used for a basic button component
+
+l)<input></input>
+This tag is used for creating textfields
+
+m)<b></b>
+This is a break tab which gives some spacing
+
+code:
+<input placeholder = "Username" type ="text" ></input>
+
+3)Attributes
+The extra things which we put in the tags otherthan the content
+
+examples:
+<img src = "a.png">
+<a href = "google.com">
+<button onclick = "" >
+<input id ="username">

@@ -1,0 +1,211 @@
+**CSS**
+It lets you add styles to your website (colors, font sizes, background colors ...).
+Also used for positioning things on the page
+
+code:
+<h1 style = "color: red; background: aqua;" >
+  
+  Hi There
+
+</h1>
+
+A)Common styling attributes
+1)color
+It is used to give color to the content
+
+code:
+<h1 style = "color: red;" >
+  
+  Hi There
+
+</h1>
+
+2)background
+It is used to give color to the background
+
+code:
+<h1 style = "background: aqua;" >
+  
+  Hi There
+
+</h1>
+
+3)border-radius
+It is used to give curves on the borders
+
+code:
+<h1 style = "color: red; background: aqua; border-radius: 10px" >
+  
+  Hi There
+
+</h1>
+
+4)border
+It adds a small line to our content boundary
+
+2px -> size of the border
+solid -> type of border
+black -> color of border
+
+code:
+<h1 style = "color: red; background: aqua; border-radius: 10px border: 2px solid black;" >
+  
+  Hi There
+
+</h1>
+
+
+5)padding / margin
+
+Padding -> It is the spacing between the content and the border
+code:
+<h1 style = "color: red; background: aqua; border-radius: 10px border: 2px solid black; padding: 10px" >
+  
+  Hi There
+
+</h1>
+
+Margin -> It is the spacing between two containers borders
+code:
+<h1 style = "color: red; background: aqua; border-radius: 10px border: 2px solid black; margin: 10px" >
+  
+  Hi There
+
+</h1>
+
+6)box-shadow
+This is used for adding the box shadows to the content
+
+box-shadow: 2px 12px 10px black;
+
+2px -> x axis deviation
+12px -> y axis deviation
+10px -> how much blur/defused the shadow will be
+
+7)font-size
+This lets us change the font size of the text
+
+B)Positioning
+How to position two content such that one is at right end and one is at left end
+
+1)Basic approach is to use float property
+
+<div style = "margin-left: 100px; margin-right: 100px">
+  
+  <span> 
+     Left corner    
+  </span>
+
+  <span style = "float:right > 
+     Right corner    
+  </span>
+
+</div>
+
+2)Flex box
+This is used for positioning the elements. When normal display: flex is added then all of the divs will come on single line.
+It will behave the same way spans does.
+
+<div style = "display: Flex">
+  
+  <div> 
+     Left corner    
+  </div>
+
+  <div> 
+     Right corner    
+  </span>
+
+</div>
+
+To justify the content that how it will be placed then we have attribute justify-content
+
+1)flex-start
+It is the default case of the flex box, all of the content needs to be at start of the screen (horizontally)
+
+<div style = "display: Flex; justify-content: flex-start">
+  
+  <div> 
+     Left corner    
+  </div>
+
+  <div> 
+     Right corner    
+  </span>
+
+</div>
+
+2)flex-start
+It stats that all of my children need to be at end of my screen (horizontally)
+
+<div style = "display: Flex; justify-content: flex-end">
+  
+  <div> 
+     Left corner    
+  </div>
+
+  <div> 
+     Right corner    
+  </span>
+
+</div>
+
+3)center
+It stats that all of my children need to be at the center of the screen (horizontally)
+
+<div style = "display: Flex; justify-content: center">
+  
+  <div> 
+     Left corner    
+  </div>
+
+  <div> 
+     Right corner    
+  </span>
+
+</div>
+
+4)space-between
+It stats that all of my children need to be equally placed space wise (horizontally)
+
+<div style = "display: Flex; justify-content: space-between">
+  
+  <div> 
+     Left corner    
+  </div>
+
+  <div> 
+     Right corner    
+  </span>
+
+</div>
+
+5)space-around
+It stats that all of my children are equally placed on the line and half of that space is given on the both ends (horizontally)
+
+<div style = "display: Flex; justify-content: space-around">
+  
+  <div> 
+     Left corner    
+  </div>
+
+  <div> 
+     Right corner    
+  </span>
+
+</div>
+
+6)space-evenly
+It stats that all of my children are equally placed on line and same space is given on both of the ends (horizontally)
+
+<div style = "display: Flex; justify-content: space-evenly">
+  
+  <div> 
+     Left corner    
+  </div>
+
+  <div> 
+     Right corner    
+  </span>
+
+</div>
