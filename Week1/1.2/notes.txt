@@ -1,0 +1,14 @@
+1)Why Languages ?
+Languages are basically used to write the high level code by humans which are compiled by the compilers to create program with 0's & 1's for the RAM/CPU to run
+
+2)Compiled vs Interpreted Languages
+Some languages are first compiled and then executed like c, c++ etc. Those languages are called compiled languages
+where as there are some languages like js, etc which compile and execute line by line these languages are called Scripting/Interpreted Languages
+
+3)Strict vs Dynamic Languages
+a)Strict languages are those languages which restricts variables to have fix type for ex c, c++ etc
+b)Dynamic languages are those languages which does let you changes the type of variables for ex js
+
+4)Single threaded vs MultiThreaded Languages
+a)Languages which can work only on one core/thread are Single threaded languages like js but there are some ways to use multi threaded usecase with js ( Will learn later on )
+b)Languages which can divide their work into multiple threads/cores are MultiThreaded Languages like java, goLang etc
