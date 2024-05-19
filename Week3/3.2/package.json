@@ -1,0 +1,26 @@
+{
+  "name": "3.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mongodbAssignment.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "mongodbAssignment.js"
+    ],
+    "ext": "js",
+    "exec": "node mongodbAssignment.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0",
+    "nodemon": "^3.1.0"
+  }
+}
