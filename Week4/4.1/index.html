@@ -1,0 +1,46 @@
+<html>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script>
+
+    let timer;
+    async function debounceFunc() {
+      clearTimeout(timer);
+
+      timer = setTimeout(() => {
+        calculateSum();
+      }, 1000);
+    }
+
+    async function calculateSum() {
+      try{
+        const a = document.getElementById("firstNum").value;
+        const b = document.getElementById("secondNum").value;
+        const element = document.getElementById("finalSum");
+        const button = document.getElementById("button");
+
+        button.innerHTML = "<i class='fa fa-spinner fa-spin'></i>";
+        const res = await fetch(`https://sum-server.100xdevs.com/sum?a=${a}&b=${b}`);
+        const data = await res.json();
+
+        button.innerHTML = "Calculate Sum";
+
+        element.innerHTML = data;
+      }catch(e){
+        console.log(e)
+      }
+
+    }
+  </script>
+
+  <body>
+    <input oninput="debounceFunc()" id="firstNum" type="text" , placeholder="First Number" />
+    <br></br>
+    <input oninput="debounceFunc()"  id="secondNum" type="text" , placeholder="Second Number" />
+    <br></br>
+    <button id ="button" onclick="calculateSum()">Calculate Sum</button>
+    <br></br>
+    <div id = "finalSum"></div>
+  </body>
+
+</html>
