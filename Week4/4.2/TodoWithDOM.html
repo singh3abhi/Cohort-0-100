@@ -1,0 +1,54 @@
+<html>
+    <script>
+        let todoCount = 1;
+        function createChild(title, description, id){
+            const parentDiv = document.createElement("div");
+            parentDiv.setAttribute("id", id);
+
+            const titleDiv = document.createElement("div");
+            titleDiv.innerHTML = title;
+
+            const descDiv = document.createElement("div");
+            descDiv.innerHTML = description;
+
+            const button = document.createElement("button");
+            button.innerHTML = "Mark As Done";
+            button.setAttribute("onClick", `markAsDone(${id})`);
+
+            parentDiv.append(titleDiv,descDiv,button);
+
+            return parentDiv;
+        }
+
+        function markAsDone(id){
+            const element = document.getElementById(id);
+            console.log(element);
+            element.children[2].innerHTML = "Done!";
+        }
+
+        function addTodo(){
+            const title = document.getElementById("title").value;
+            const description = document.getElementById("description").value;
+            if(title === '' || description == ''){
+                alert("Please fill the title and desc");
+                return;
+            }
+
+            const container = document.getElementById("container");
+            container.append(createChild(title,description,todoCount++));
+            todoCount++;
+        }
+
+    </script>
+    <body>
+        <div>
+            <input id = "title",type="text", placeholder="title">
+            <br></br>
+            <input id = "description", type="text", placeholder="description">
+            <br></br>
+            <button onclick="addTodo()">Add Todo</button>
+            <br></br>
+            <div id="container" ></div>
+        </div>
+    </body>
+</html>
