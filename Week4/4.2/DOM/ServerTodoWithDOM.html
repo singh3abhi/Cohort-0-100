@@ -1,0 +1,59 @@
+<html>
+
+
+<body>
+    <div>
+        <input id="title" ,type="text" , placeholder="title">
+        <br></br>
+        <input id="description" , type="text" , placeholder="description">
+        <br></br>
+        <button onclick="addTodo()">Add Todo</button>
+        <br></br>
+        <div id="container"></div>
+    </div>
+</body>
+
+<script>
+    let todoCount = 1;
+    function createChild(title, description, id) {
+        const parentDiv = document.createElement("div");
+        parentDiv.setAttribute("id", id);
+
+        const titleDiv = document.createElement("div");
+        titleDiv.innerHTML = title;
+
+        const descDiv = document.createElement("div");
+        descDiv.innerHTML = description;
+
+        const button = document.createElement("button");
+        button.innerHTML = "Mark As Done";
+        button.setAttribute("onClick", `markAsDone(${id})`);
+
+        parentDiv.append(titleDiv, descDiv, button);
+
+        return parentDiv;
+    }
+
+    function updateDomAccordingToState(state){
+        const parent = document.getElementById("container");
+        parent.innerHTML = "";
+        /* 
+        This is not a good approach as in UI it can be seen for ms that the screen clears and then new items are loaded every 5 secs
+        Better way is to find out the difference between the old state and new state and then update the list accordingly
+        In react we do this optimal solution only under the hood
+        */
+        for(let i = 0; i < state.length; i++){
+            const child = createChild(state[i].title, state[i].description, state[i].id);
+            parent.append(child);
+        }
+    }
+
+    window.setInterval(async function name() {
+        const res = await fetch("https://sum-server.100xdevs.com/todos") // Server not working now
+        const json = await res.json();
+
+        updateDomAccordingToState(json.todos);
+    }, 5000);
+
+</script>
+</html>
